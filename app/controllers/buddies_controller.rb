@@ -6,7 +6,8 @@ def index
 end
 
 def new
-  @buddy = Buddy.new # Needed to instantiate the form_for
+  @user = current_user
+  @buddy = Buddy.new
 end
 
 def show
@@ -15,6 +16,7 @@ end
 
 def create
   @buddy = Buddy.new(buddy_params)
+  @buddy.user = current_user
   if @buddy.save
     redirect_to buddy_path(@buddy)
   else

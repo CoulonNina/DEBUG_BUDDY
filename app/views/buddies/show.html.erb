@@ -11,5 +11,7 @@
 
 <p> <%= link_to "Edit", edit_buddy_path %></p>
 
+<%= render "bookings/form", buddy: @buddy, booking: @booking %>
+
 
 To do : link_to "Book a session with me", new_buddy_booking_path

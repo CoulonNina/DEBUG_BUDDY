@@ -51,6 +51,8 @@ gem "sassc-rails"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
+gem "cloudinary"
+
 
 #DEVISE
 gem "devise"

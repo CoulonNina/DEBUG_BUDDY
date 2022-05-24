@@ -16,10 +16,13 @@
 
   </div> %>
 <div class="d-flex bd-highlight justify-content-center">
-  <%# <% @last_buddies.each do |buddy| %>
-    <%# <div class="p-2 flex-fill bd-highlight">  %>
-      <%# <%= prenom-nom-photo-prix %>
+  <%= @last_buddies.each do |buddy| %>
+     <div class="p-2 flex-fill bd-highlight">  %>
+      <%= @buddy.user.last_name %>
+      <%= @buddy.user.first_name %>
+      <%= @buddy.user.photo %>
+
     </div>
-  <%# <% end %> 
+  <% end %>
   </div>
 </div>

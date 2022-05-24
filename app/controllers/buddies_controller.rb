@@ -13,6 +13,7 @@ end
 
 def show
   @buddy = Buddy.find(params[:id])
+  @booking = Booking.new
 end
 
 def create

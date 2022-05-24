@@ -1,10 +1,10 @@
 <h1>show</h1>
 
 <h1>Decouvrez le profil de <%= @buddy.user.first_name %></h1>
-<%= @buddy.description%>
-<%= @buddy.skills %>
 
+<p>Description : <%= @buddy.description%></p>
+<p>Mes skills : <%= @buddy.skills %></p>
 
+<%= link_to "Delete my profile", @buddy %>
 
-<p>link_to /buddies/:buddy_id/bookings/new with "booking butn"</p>
-<p>link_to buddies_path(index) with back to home btn</p>
+To do : link_to "Book a session with me", new_buddy_booking_path

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <h1>Book your buddy</h1>
-      <%= simple_form_for [ @buddy, @booking] do |f| %>
+      <%= simple_form_for(new_buddy_booking_path) do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
         <%= f.submit class: 'btn btn-primary' %>

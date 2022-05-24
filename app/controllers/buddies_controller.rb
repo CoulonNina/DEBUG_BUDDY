@@ -39,7 +39,7 @@ end
 private
 
 def buddy_params
-  params.require(:buddy).permit(:skills, :description)
+  params.require(:buddy).permit(:skills, :description, :photo)
 end
 
 def set_buddy

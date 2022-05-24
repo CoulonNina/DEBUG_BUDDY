@@ -24,3 +24,52 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+footer * {
+  margin: 0;
+}
+
+
+#socialmedia li a {
+  background-color: transparent;
+  background-image: url(/assets/sprites.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+#socialmedia .Twitter a {
+  background-position: 0px 0px;
+}
+
+#socialmedia .Twitter a:hover {
+  background-position: -0px -77px;
+}
+
+#socialmedia .FB a {
+  background-position: -88px -0px;
+}
+
+#socialmedia .FB a:hover {
+  background-position: -89px -76px;
+}
+
+footer p span {
+  color: #ff3578;
+  font-size: 1.4em;
+}
+
+/* STICKY FOOTER */
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -10.625em;
+}
+
+footer, .push {
+  height: 10.625em;
+}

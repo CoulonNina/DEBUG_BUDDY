@@ -1,11 +1,12 @@
-<div class="card-trip">
-<div class="d-flex bd-highlight justify-content-center">
+<div class="container">
+<div class="cards">
   <% @last_buddies.each do |buddy| %>
-     <div class="p-2 flex-fill bd-highlight">
+     <div class="card-category">
            <%= buddy.user.first_name %>
            <%= buddy.user.last_name %>
            <%# <%= buddy.user.photo %>
-</div>
+      </div>
   <% end %>
   </div>
+</div>
 </div>

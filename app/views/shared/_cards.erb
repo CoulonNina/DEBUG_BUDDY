@@ -1,11 +1,11 @@
 <div class="card-trip">
-  <img src="homer-scenario" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><Jean-Pierre></Jean-Pierre></h2>
-      <p>Je suis un super buddy</p>
-    </div>
-    <h2 class="card-trip-pricing">€10.00</h2>
-    <img src="homer-scenario.png" class="card-trip-user avatar-bordered" />
+<div class="d-flex bd-highlight justify-content-center">
+  <% @last_buddies.each do |buddy| %>
+     <div class="p-2 flex-fill bd-highlight">
+      <%= buddy.user.last_name %>
+      <%= buddy.user.first_name %>
+      <%= buddy.user.photo %>
+</div>
+  <% end %>
   </div>
 </div>

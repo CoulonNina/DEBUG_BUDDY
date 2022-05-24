@@ -4,6 +4,5 @@ class Buddy < ApplicationRecord
   validates :skills, inclusion: { in: SKILLS }
   validates :user, uniqueness: true
   belongs_to :user
-  has_many :bookings
-  has_one_attached :photo
+  has_many :bookings, dependent: :destroy
 end

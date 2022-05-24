@@ -6,7 +6,16 @@
 <li>description</li>
 <li>puis page de sign in -> /users/sign_in ?</li>
 
+
+<div>
+  <p>
+    <%= current_user.first_name %>
+  </p>
+</div>
 <p>btn qui renvoi vers la show /buddies/:id</p>
 
-
-
+<%= simple_form_for(@buddy) do |f| %>
+<%= f.input :skills %>
+<%= f.input :description %>
+<%= f.submit "#{ @buddy.persisted? ? 'Update' : 'Create' } my profile", class: 'btn btn-primary' %>
+<% end %>

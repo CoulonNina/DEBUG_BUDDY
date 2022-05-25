@@ -1,6 +1,5 @@
 
 <%= render "shared/banner" %>
-
 <div class="container">
 <div class="cards">
   <% @last_buddies.each do |buddy| %>
@@ -8,6 +7,7 @@
            <%= buddy.user.first_name %>
            <%= buddy.user.last_name %>
            <%# <%= buddy.user.photo %>
+
       </div>
   <% end %>
   </div>

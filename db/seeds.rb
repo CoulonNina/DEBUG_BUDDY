@@ -31,6 +31,27 @@ user3 = User.create!(
     last_name: "Sazanka",
     password: "azerty"
   )
+
+  user4 = User.create!(
+    email: "jennyfer@testmail.com",
+    first_name: "Jennyfer",
+    last_name: "Sardou",
+    password: "azerty"
+  )
+
+  user5 = User.create!(
+    email: "paul@gmail.com",
+    first_name: "Paul",
+    last_name: "Bert",
+    password: "azerty"
+  )
+
+  user6 = User.create!(
+    email: "Tom@testmail.com",
+    first_name: "Tom",
+    last_name: "Paradis",
+    password: "azerty"
+  )
 puts 'Finished!'
 
 
@@ -60,6 +81,29 @@ buddy3 = Buddy.new(
 buddy3.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653044199/cld-sample.jpg"), filename: "image")
 buddy3.save
 
+buddy4 = Buddy.new(
+  skills: "Ruby",
+  description: "Hello everyone, book a session if you need help !",
+  user: user4
+)
+buddy4.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653044199/cld-sample.jpg"), filename: "image")
+buddy4.save
+
+buddy5 = Buddy.new(
+  skills: "Python",
+  description: "N'hesitez pas à me contacter, ne restew plus bloqué !",
+  user: user5
+)
+buddy5.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653044199/cld-sample.jpg"), filename: "image")
+buddy5.save
+
+buddy6 = Buddy.new(
+  skills: "PHP",
+  description: "N'hesitez pas à me contacter, je code depuis des années !",
+  user: user6
+)
+buddy6.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653044199/cld-sample.jpg"), filename: "image")
+buddy6.save
 puts 'Finished!'
 
 puts 'Creating bookinks...'

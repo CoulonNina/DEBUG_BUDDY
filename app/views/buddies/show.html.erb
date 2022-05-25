@@ -1,19 +1,27 @@
-<h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
+ <div class="container">
+  <div class="d-flex my-5">
+    <div class="w-50 p-5">
+      <h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
 
-<p>About me : <%= @buddy.description%></p>
-<p>My skills : <%= @buddy.skills %></p>
-
-
-<% if @buddy.photo.present? %>
-  <%= cl_image_tag @buddy.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-
-<%= link_to "Delete my profile", buddy_path(@buddy),
-data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <p class="px-0 text-black">About me : <%= @buddy.description%></p>
+      <p class="px-0 text-black">My skills : <%= @buddy.skills %></p>
 
 
-<p><%= link_to "Back", buddies_path %></p>
 
-<p> <%= link_to "Edit", edit_buddy_path %></p>
+<div class= "text-start center">
+      <%= link_to "Delete my profile", buddy_path(@buddy),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      <p class="px-0 text-black"><%= link_to "Back", buddies_path %></p>
+      <p class="px-0 text-black"> <%= link_to "Edit", edit_buddy_path %></p>
+    </div>
+</div>
 
-<%= render "bookings/form", buddy: @buddy, booking: @booking %>
+    <div class="w-50 p-5 margin-bottom: 50%">
+      <% if @buddy.photo.present? %>
+        <%= cl_image_tag @buddy.photo.key, height: 300, crop: :fill %>
+      <% end %>
+      <%= render "bookings/form", buddy: @buddy, booking: @booking %>
+
+    </div>
+  </div>
+ </div>

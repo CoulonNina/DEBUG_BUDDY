@@ -10,12 +10,12 @@
         <div class="card-category position-relative" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
           <%= buddy.user.first_name %>
           <%= buddy.user.last_name %>
+          <%# <%= link_to buddy.user.photo %>
 
           <span class="position-absolute p-2 badge text-white text-decoration-none rounded bg-secondary" style="bottom:10px; right:10px;"><%= buddy.skills %>
           <i class="fs-6 far fa-heart"></i>
           </span>
 
-          <%# <%= link_to buddy.user.photo %>
         </div>
       <% end %>
     <% end %>

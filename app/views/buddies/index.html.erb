@@ -1,9 +1,8 @@
-<h1>Index See all Buddies</h1>
-<p>navbar</p>
+<h1>See all Buddies</h1>
 
 <ul>
   <% @buddies.each do |buddy| %>
-  <li> <%= buddy.user.first_name %> </li>
+  <li> <%= link_to buddy.user.first_name, buddy_path(buddy) %> </li>
   <li> <%= buddy.user.last_name %> </li>
   <li> <%= buddy.user.email %> </li>
   <li> <%= buddy.description %> </li>
@@ -13,3 +12,4 @@
 </ul>
 
 <%= link_to "Register as a buddy", new_buddy_path %>
+<%= link_to "Back to Home", root_path %>

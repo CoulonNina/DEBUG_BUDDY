@@ -1,19 +1,27 @@
+
 <div class="body-wrapper">
+
   <h1>See all Buddies</h1>
+<div class="container min-height: calc(100vh - 60px - 100px)">
 
-
-  <ul>
+  <div class="cards">
     <% @buddies.each do |buddy| %>
-    <li> <%= link_to buddy.user.first_name, buddy_path(buddy) %> </li>
-    <li> <%= buddy.user.last_name %> </li>
-    <li> <%= buddy.user.email %> </li>
-    <li> <%= buddy.description %> </li>
-    <li> <%= buddy.skills %> </li>
+      <%= link_to buddy_path(buddy) do %>
+        <div class="card-category position-relative" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
+          <%= buddy.user.first_name %>
+          <%= buddy.user.last_name %>
 
+          <span class="position-absolute p-2 badge text-white text-decoration-none rounded bg-secondary" style="bottom:10px; right:10px;"><%= buddy.skills %>
+          <i class="fs-6 far fa-heart"></i>
+          </span>
+
+          <%# <%= link_to buddy.user.photo %>
+        </div>
+      <% end %>
     <% end %>
-  </ul>
-
-<%= link_to "Register as a buddy", new_buddy_path %>
-<%= link_to "Back to Home", root_path %>
+  </div>
+</div>
+  <%= link_to "Register as a buddy", new_buddy_path %>
+  <%= link_to "Back to Home", root_path %>
 
 </div>

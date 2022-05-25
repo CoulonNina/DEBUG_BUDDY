@@ -1,15 +1,18 @@
 
 <%= render "shared/banner" %>
 <div class="container">
-<div class="cards">
-  <% @last_buddies.each do |buddy| %>
-     <div class="card-category" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
-           <%= link_to buddy.user.first_name, buddy_path(buddy) %>
-           <%= link_to buddy.user.last_name, buddy_path(buddy) %>
-           <%# <%= buddy.user.photo %>
-
+  <div class="cards">
+    <% @last_buddies.each do |buddy| %>
+      <div class="card-category position-relative" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
+        <%= buddy.user.first_name %>
+        <%= buddy.user.last_name %>
+        <%# <%= link_to buddy.user.photo %>
+        <div class="position-absolute p-2 bg-primary text-white rounded" style="bottom:10px; right:10px;">
+          <%= link_to "See buddy", buddy_path(buddy), class: "fs-6 text-white text-decoration-none"%>
+          <i class="far fa-heart"></i>
+        </div>
       </div>
-  <% end %>
+    <% end %>
+    </div>
   </div>
-</div>
 </div>

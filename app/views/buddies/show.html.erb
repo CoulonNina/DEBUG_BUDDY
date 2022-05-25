@@ -3,8 +3,14 @@
 <p>About me : <%= @buddy.description%></p>
 <p>My skills : <%= @buddy.skills %></p>
 
+
+<% if @buddy.photo.present? %>
+  <%= cl_image_tag @buddy.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <%= link_to "Delete my profile", buddy_path(@buddy),
 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
 
 <p><%= link_to "Back", buddies_path %></p>
 

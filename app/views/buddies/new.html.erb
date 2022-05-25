@@ -1,11 +1,6 @@
-<h1>New</h1>
-<li>puis page de sign in -> /users/sign_in ?</li>
+<h1>Create your Buddy Profile</h1>
 
-
-Connecté sur le profil de : <%= current_user.first_name %>
-
-
-<p>btn qui renvoi vers la show /buddies/:id</p>
+Your are connected as : <%= current_user.first_name %>
 
 <%= simple_form_for(@buddy) do |f| %>
 <%= f.input :photo, as: :file %>
@@ -13,3 +8,5 @@ Connecté sur le profil de : <%= current_user.first_name %>
 <%= f.input :description %>
 <%= f.submit "#{ @buddy.persisted? ? 'Update' : 'Create' } my profile", class: 'btn btn-primary' %>
 <% end %>
+
+<%= link_to "Back to Home", root_path %>

@@ -1,17 +1,13 @@
-<h1>show</h1>
+<h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
 
-<h1>Decouvrez le profil de <%= @buddy.user.first_name %></h1>
+<p>About me : <%= @buddy.description%></p>
+<p>My skills : <%= @buddy.skills %></p>
 
-<p>Description : <%= @buddy.description%></p>
-<p>Mes skills : <%= @buddy.skills %></p>
-
-<%= link_to "Delete my profile", @buddy %>
+<%= link_to "Delete my profile", buddy_path(@buddy),
+data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
 <p><%= link_to "Back", buddies_path %></p>
 
 <p> <%= link_to "Edit", edit_buddy_path %></p>
 
 <%= render "bookings/form", buddy: @buddy, booking: @booking %>
-
-
-To do : link_to "Book a session with me", new_buddy_booking_path

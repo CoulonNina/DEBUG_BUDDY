@@ -3,16 +3,16 @@
 <div class="container">
   <div class="cards">
     <% @last_buddies.each do |buddy| %>
-      <div class="card-category position-relative" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
+      <div class="card-category position-relative" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, crop: :fill %>')">
         <%= buddy.user.first_name %>
         <%= buddy.user.last_name %>
-        <%# <%= link_to buddy.user.photo %>
-        <div class="position-absolute p-2 bg-primary text-white rounded" style="bottom:10px; right:10px;">
+        <div class="position-absolute p-2 bg-secondary text-white rounded" style="bottom:10px; right:10px;">
           <%= link_to "See buddy", buddy_path(buddy), class: "fs-6 text-white text-decoration-none"%>
           <i class="far fa-heart"></i>
         </div>
       </div>
     <% end %>
+    
     </div>
   </div>
 </div>

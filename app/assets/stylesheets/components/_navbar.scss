@@ -1,5 +1,4 @@
 .navbar-lewagon {
-  justify-content: space-between;
   background: white;
 }
 
@@ -9,4 +8,26 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  border-radius: 20px;
+  margin-top: -1em;
+}
+
+.nav-link-button {
+  color: #4A4A4A;
+  border: 1px solid #6b6a6a;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
 }

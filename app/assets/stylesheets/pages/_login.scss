@@ -1,0 +1,29 @@
+.loging {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #222;
+}
+
+.form-actions {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: #4A4A4A;
+  border: 1px solid #6b6a6a;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  text-align: center
+}

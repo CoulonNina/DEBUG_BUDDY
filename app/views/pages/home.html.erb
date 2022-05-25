@@ -1,13 +1,13 @@
 
 <%= render "shared/banner" %>
-
 <div class="container">
 <div class="cards">
   <% @last_buddies.each do |buddy| %>
      <div class="card-category" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
-           <%= buddy.user.first_name %>
-           <%= buddy.user.last_name %>
+           <%= link_to buddy.user.first_name, buddy_path(buddy) %>
+           <%= link_to buddy.user.last_name, buddy_path(buddy) %>
            <%# <%= buddy.user.photo %>
+
       </div>
   <% end %>
   </div>

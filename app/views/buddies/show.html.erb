@@ -1,19 +1,25 @@
-<h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
 
+<div class="container" style="text-align-center">
+
+  <h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
+
+<div>
 <p>About me : <%= @buddy.description%></p>
 <p>My skills : <%= @buddy.skills %></p>
-
-
 <% if @buddy.photo.present? %>
   <%= cl_image_tag @buddy.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
+</div>
+
 
 <%= link_to "Delete my profile", buddy_path(@buddy),
 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-
 
 <p><%= link_to "Back", buddies_path %></p>
 
 <p> <%= link_to "Edit", edit_buddy_path %></p>
 
+<div class="form" >
 <%= render "bookings/form", buddy: @buddy, booking: @booking %>
+</div>
+</div>

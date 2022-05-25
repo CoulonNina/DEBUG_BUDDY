@@ -1,12 +1,14 @@
 <div class="container">
 <div class="cards">
+
   <% @last_buddies.each do |buddy| %>
      <div class="card-category">
            <%= buddy.user.first_name %>
            <%= buddy.user.last_name %>
            <%# <%= buddy.user.photo %>
+           <%= link_to "See buddy", buddy_path %>
+
       </div>
   <% end %>
-  </div>
 </div>
 </div>

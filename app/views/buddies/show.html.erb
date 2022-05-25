@@ -5,6 +5,10 @@
 <p>Description : <%= @buddy.description%></p>
 <p>Mes skills : <%= @buddy.skills %></p>
 
+<% if @buddy.photo.present? %>
+  <%= cl_image_tag @buddy.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <%= link_to "Delete my profile", @buddy %>
 
 <p><%= link_to "Back", buddies_path %></p>

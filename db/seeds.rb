@@ -35,42 +35,50 @@ puts 'Finished!'
 
 
 puts 'Creating buddies...'
-Buddy.create!(
+
+buddy1 = Buddy.new(
     skills: "Javascript",
     description: "J'adore coder et je suis hyper sympa",
     user: user1
   )
+buddy1.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653470017/49293752337_a02336c11a_h_xgrvzo.jpg"), filename: "image")
+buddy1.save
 
-Buddy.create!(
+buddy2 = Buddy.new(
     skills: "HTML/CSS",
     description: "Je suis prète à vous aider sur de nouveaux projets",
     user: user2
   )
+buddy2.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653044518/qr4u4wfztr9x1afpfpoz.jpg"), filename: "image")
+buddy2.save
 
-Buddy.create!(
+buddy3 = Buddy.new(
     skills: "PHP",
     description: "N'hesitez pas à me contacter, je code depuis des années !",
     user: user3
   )
+buddy3.photo.attach(io: URI.open("https://res.cloudinary.com/dgw2zajw1/image/upload/v1653044199/cld-sample.jpg"), filename: "image")
+buddy3.save
+
 puts 'Finished!'
 
 puts 'Creating bookinks...'
 Booking.create!(
     user_id: user1.id,
-    buddy_id: user2.id,
+    buddy_id: buddy2.id,
     start_date: Date.today,
     end_date: Date.tomorrow,
 )
 
 Booking.create!(
     user_id: user2.id,
-    buddy_id: user3.id,
+    buddy_id: buddy3.id,
     start_date: Date.yesterday,
     end_date: Date.today,
   )
 Booking.create!(
     user_id: user3.id,
-    buddy_id: user1.id,
+    buddy_id: buddy1.id,
     start_date: Date.today,
     end_date: Date.tomorrow,
   )

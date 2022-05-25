@@ -54,7 +54,6 @@ user3 = User.create!(
   )
 puts 'Finished!'
 
-
 puts 'Creating buddies...'
 
 buddy1 = Buddy.new(

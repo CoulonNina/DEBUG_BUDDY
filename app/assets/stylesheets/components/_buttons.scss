@@ -1,0 +1,29 @@
+// Login button
+.nav-link-button {
+  color: #4A4A4A;
+  border: 1px solid #6b6a6a;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+// Sign up button
+.btn-signup {
+  background-color: #7D1E6A;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  border: 1px solid black;
+}
+
+// text button
+.btn-text {
+  text-decoration: none;
+  color: #7D1E6A;
+  transition: background 0.3s ease;
+}

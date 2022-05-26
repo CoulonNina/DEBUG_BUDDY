@@ -1,11 +1,9 @@
 
-
-
 <div class="cards">
   <% @last_buddies.each do |buddy| %>
 
         <div class="a-box">
-    <%= link_to buddy_path(buddy) do %>
+    <%= link_to buddy_path(buddy), class: "clickable-cards" do %>
           <div class="img-container">
             <div class="img-inner">
               <div class="inner-skew" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, crop: :fill %>')">
@@ -15,10 +13,15 @@
           <div class="text-container">
             <h3> <%= buddy.user.first_name %> <%= buddy.user.last_name %></h3>
             <div class="info-content">
-              <div>
-                A METRRE LES skills
+              <div class="line-clamp">
+                <p>
+                <%= buddy.description %>
+                </p>
               </div>
-              <a class="btn btn-flat" href="#">Apply now</a>
+              <div class="skills" >
+              <span class="badge rounded-pill bg-primary mx-3"><%= buddy.skills %>
+              </span>
+            </div>
             </div>
           </div>
     <% end %>

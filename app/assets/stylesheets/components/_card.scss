@@ -27,9 +27,22 @@
 
 .info-content {
   display: flex;
-
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+a:hover {
+  color: red !important;
+}
 
 
 
@@ -99,7 +112,6 @@
     border-radius: 5px;
     overflow: hidden;
     padding: 0px;
-    transform: skew(0deg, 13deg);
     font-size: 0px;
     margin: 30px 0px 0px 0px;
     background: #c8c2c2;
@@ -114,11 +126,11 @@
   background: #fff;
   margin: -137px 0px 30px 22px;
   line-height: 19px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .text-container h3 {
   margin: 20px 0px 10px 0px;
-  color: #04bcff;
+  color: #D21E27;
   font-size: 18px;
 }

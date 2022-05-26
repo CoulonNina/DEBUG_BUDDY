@@ -3,19 +3,22 @@
   <div class="d-flex">
 
     <div class="col-8 p-5">
-      <p class="px-0 text-black text"> <i class="fa-solid fa-rotate-left"></i> <%= link_to "Back", buddies_path %></p>
+      <p class="px-0 text-black text"> <i class="fa-solid fa-rotate-left"></i> <%= link_to "Back to all buddies", buddies_path %></p>
         <h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
       <div class="card border-light my-3 p-3">
           <p class="px-0 text-black"><strong>About me : </strong><em><%= @buddy.description%></em></p>
       </div>
 
+
       <div class="skills">
+      <div class="card border-light my-3 p-3">
           <p class="px-0 text-black"><strong>My skills : </strong></p>
-          <span class="badge rounded-pill bg-primary mx-3"><%= @buddy.skills %>
+          <span class="badge rounded-pill bg-primary m-3"><%= @buddy.skills %>
           </span>
       </div>
+     </div>
 
-      <div class="text-left">
+      <div class="text-left mt-3">
         <p class="px-0 text-black mx-3"> <%= link_to "Edit", edit_buddy_path %></p>
         <%= link_to "Delete my profile", buddy_path(@buddy),
         data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
@@ -23,22 +26,25 @@
     </div>
 
     <div class="col-4 border-light my-3 d-flex flex-column">
-      <div class="card border-light p-3">
+      <div class="card border-light p-3 d-flex align-items-center justify-content-center" >
         <% if @buddy.photo.present? %>
           <%= cl_image_tag @buddy.photo.key, height: 150, crop: :fill, class: "align-self-center"%>
         <% end %>
-        <ul class="infos">
-          <li><span class="label">Tarif horaire</span>
-          <span class="value">60€</span></li>
-          <li><span class="label">Temps de réponse</span>
-          <span class="value">3h</span></li>
+        <ul class="infos p-2">
+          <li class="d-flex justifiy-content-between">
+          <p class="label">Price</p>
+          <p class="value">60€/h</p>
+          </li>
+          <li class="d-flex justifiy-content-between">
+         <span class="label">Temps de réponse</span>
+         <span class="value">3h</span></li>
         </ul>
-        <div class="logos" style="text-align: center">
-          <a href=""><i class="fa-solid fa-envelope"></i></a>
+        <div class="logos mx-3" style="text-align: center">
+          <a href=""><i class="fa-brands fa-github"></i></a>
           <a href=""><i class="fa-brands fa-twitter"></i></a>
           <a href=""><i class="fa-solid fa-user-group"></i></a>
-          <button class="btn-primary mt-3">
-            Message me!
+          <button class="btn-primary mt-3 mb-2">
+            Email me
           </button>
         </div>
       </div>

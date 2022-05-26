@@ -1,18 +1,20 @@
 .footer {
-  background: #F4F4F4;
+  background: black;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 150px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  color: white;
+  font-size: bold;
 }
 .footer-links {
   display: flex;
   align-items: center;
 }
 .footer-links a {
-  color: black;
+  color: white;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -30,12 +32,12 @@ footer * {
 }
 
 .fa-facebook {
-  background: #3B5998;
+  background: black;
   color: white;
 }
 
 .fa-twitter {
-  background: #55ACEE;
+  background: black;
   color: white;
 }
 
@@ -82,4 +84,40 @@ footer p span {
 
 footer, .push {
   height: 10.625em;
+}
+
+.link-footer1 {
+  text-decoration: none;
+  color: white;
+  transition: background #D23333 0.3s ease;
+  position: relative;
+  display: flex;
+  font-size: smaller;
+}
+
+.link-footer2 {
+  text-decoration: none;
+  color: white;
+  transition: background #D23333 0.3s ease;
+  position: relative;
+  display: flex;
+  font-size: small;
+}
+
+.link-footer3 {
+  text-decoration: none;
+  color: white;
+  transition: background #D23333 0.3s ease;
+  position: relative;
+  display: flex;
+  font-size: small;
+}
+
+.link-footer4 {
+  text-decoration: none;
+  color: white;
+  transition: background #D23333 0.3s ease;
+  position: relative;
+  display: flex;
+  font-size: small;
 }

@@ -1,12 +1,15 @@
 // Specific CSS for your home-page
 body {
-  background: rgb(239, 236, 236);
+
+  background: white;
+
 }
 
 p {
   padding: $spacer ($spacer * 3);
+  padding: 0px;
 }
 
 a:hover {
-  color: rgb(9, 1, 103);
+  color: white;
 }

@@ -1,0 +1,15 @@
+<%if policy(@booking).show? %>
+<h1>Mes bookings</h1>
+<% @bookings.each do |booking|%>
+
+<div>
+<%= booking.start_date %>
+<%= booking.end_date %>
+<%= booking.user.first_name %>
+<%= booking.user.last_name %>
+<%= booking.user.email %>
+</div>
+<% end %>
+<% end %>
+
+

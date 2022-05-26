@@ -1,4 +1,4 @@
-.loging {
+.signup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,17 +13,9 @@
   background-color: #FFE59D;
 }
 
-.form-actions {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  color: #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-  text-decoration: none;
-  text-align: center
+.form-input {
+  color: #7D1E6A;
+
 }
 
 .btn-signup {
@@ -34,4 +26,19 @@
   font-weight: bold;
   transition: background 0.3s ease;
   border: 1px solid black;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #7D1E6A;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.btn-text {
+  text-decoration: none;
+  color: #7D1E6A;
+  transition: background 0.3s ease;
 }

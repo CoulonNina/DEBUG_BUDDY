@@ -1,6 +1,7 @@
-<h1>Book your buddy</h1>
+
 <%= simple_form_for [@buddy, @booking] do |f| %>
   <%= f.input :start_date, as: :date, html5: true %>
   <%= f.input :end_date, as: :date, html5: true %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
+

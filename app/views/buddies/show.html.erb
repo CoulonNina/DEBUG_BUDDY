@@ -19,9 +19,14 @@
      </div>
 
       <div class="text-left mt-3">
-        <p class="px-0 text-black mx-3"> <%= link_to "Edit", edit_buddy_path %></p>
-        <%= link_to "Delete my profile", buddy_path(@buddy),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+        <% if policy(@buddy).update? %>
+          <p class="px-0 text-black mx-3">
+            <%= link_to "Edit my profile", edit_buddy_path(@buddy) %> |
+         </p>
+        <% end %>
+
+        <%= button_to "Delete my profile", @buddy, method: :delete if policy(@buddy).destroy? %>
       </div>
     </div>
 
@@ -55,9 +60,5 @@
     </div>
 
   </div>
-
-
-
-
 
  </div>

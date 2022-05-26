@@ -1,6 +1,6 @@
 class Buddy < ApplicationRecord
-  SKILLS = ["Ruby", "Javascript", "HTML/CSS", "Python", "PHP"]
-  validates :description, :skills,  presence: true
+  SKILLS = ["Ruby", "Javascript", "HTML/CSS", "Python", "PHP", "SQL", "C++", "Swift"]
+  validates :description, :skills, presence: true
   validates :skills, inclusion: { in: SKILLS }
   validates :user, uniqueness: true
   belongs_to :user

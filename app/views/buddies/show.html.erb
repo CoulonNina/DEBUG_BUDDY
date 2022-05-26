@@ -5,10 +5,19 @@
       <p class="px-0 text-black">About me : <%= @buddy.description%></p>
       <p class="px-0 text-black">My skills : <%= @buddy.skills %></p>
 <div class= "text-start center">
-      <%= link_to "Delete my profile", buddy_path(@buddy),
+
+
+      <%#= link_to "Delete my profile", buddy_path(@buddy),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+
+
       <p class="px-0 text-black"><%= link_to "Back", buddies_path %></p>
-      <p class="px-0 text-black"> <%= link_to "Edit", edit_buddy_path %></p>
+      <p class="px-0 text-black">
+      <% if policy(@buddy).update? %>
+      <%= link_to "Edit my profile", edit_buddy_path(@buddy) %> |
+      <% end %>
+      </p>
     </div>
 </div>
     <div class="w-50 p-5 margin-bottom: 50%">
@@ -19,3 +28,7 @@
     </div>
   </div>
  </div>
+
+
+<%= button_to "Delete my profile", @buddy, method: :delete if policy(@buddy).destroy? %>
+<%#=       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

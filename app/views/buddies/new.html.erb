@@ -4,7 +4,7 @@ Your are connected as : <%= current_user.first_name %>
 
 <%= simple_form_for(@buddy) do |f| %>
 <%= f.input :photo, as: :file %>
-<%#= f.input :skills, collection: Buddy::SKILLS %>
+<%= f.input :skills, collection: Buddy::SKILLS %>
 <%= f.input :description %>
 <%= f.submit "#{ @buddy.persisted? ? 'Update' : 'Create' } my profile", class: 'btn btn-primary' %>
 <% end %>

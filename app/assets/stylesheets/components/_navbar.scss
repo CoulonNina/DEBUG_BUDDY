@@ -1,6 +1,7 @@
 .navbar-lewagon {
   background: white;
   height: 60px;
+  display: flex;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,8 +9,8 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
-  border-radius: 20px;
+  width: 30px;
+  border-radius: 0px;
   margin-top: -1em;
 }
 

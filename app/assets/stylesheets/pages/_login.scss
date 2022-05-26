@@ -1,6 +1,4 @@
 .loging {
-  margin-bottom: 50px;
-  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +10,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
   color: #222;
+  background-color: #FFE59D;
 }
 
 .form-actions {
@@ -25,4 +24,14 @@
   transition: opacity 0.3s ease;
   text-decoration: none;
   text-align: center
+}
+
+.btn-signup {
+  background-color: #7D1E6A;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  border: 1px solid black;
 }

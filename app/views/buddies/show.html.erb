@@ -1,21 +1,57 @@
 <div class="container">
-  <div class="d-flex my-5">
-    <div class="w-50 p-5">
-      <h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
-      <p class="px-0 text-black">About me : <%= @buddy.description%></p>
-      <p class="px-0 text-black">My skills : <%= @buddy.skills %></p>
-<div class= "text-start center">
-      <%= link_to "Delete my profile", buddy_path(@buddy),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-      <p class="px-0 text-black"><%= link_to "Back", buddies_path %></p>
-      <p class="px-0 text-black"> <%= link_to "Edit", edit_buddy_path %></p>
+
+  <div class="d-flex">
+
+    <div class="col-8 p-5">
+      <p class="px-0 text-black text"> <i class="fa-solid fa-rotate-left"></i> <%= link_to "Back", buddies_path %></p>
+        <h1>Discover <%= @buddy.user.first_name %>'s profile</h1>
+      <div class="card border-light my-3 p-3">
+          <p class="px-0 text-black"><strong>About me : </strong><em><%= @buddy.description%></em></p>
+      </div>
+
+      <div class="skills">
+          <p class="px-0 text-black"><strong>My skills : </strong></p>
+          <span class="badge rounded-pill bg-primary mx-3"><%= @buddy.skills %>
+          </span>
+      </div>
+
+      <div class="text-left">
+        <p class="px-0 text-black mx-3"> <%= link_to "Edit", edit_buddy_path %></p>
+        <%= link_to "Delete my profile", buddy_path(@buddy),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </div>
     </div>
-</div>
-    <div class="w-50 p-5 margin-bottom: 50%">
-      <% if @buddy.photo.present? %>
-        <%= cl_image_tag @buddy.photo.key, height: 300, crop: :fill %>
-      <% end %>
-      <%= render "bookings/form", buddy: @buddy, booking: @booking %>
+
+    <div class="col-4 border-light my-3 d-flex flex-column">
+      <div class="card border-light p-3">
+        <% if @buddy.photo.present? %>
+          <%= cl_image_tag @buddy.photo.key, height: 150, crop: :fill, class: "align-self-center"%>
+        <% end %>
+        <ul class="infos">
+          <li><span class="label">Tarif horaire</span>
+          <span class="value">60€</span></li>
+          <li><span class="label">Temps de réponse</span>
+          <span class="value">3h</span></li>
+        </ul>
+        <div class="logos" style="text-align: center">
+          <a href=""><i class="fa-solid fa-envelope"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-solid fa-user-group"></i></a>
+          <button class="btn-primary mt-3">
+            Message me!
+          </button>
+        </div>
+      </div>
+
+      <div class="card border-light shadow p-3 mt-3">
+        <%= render "bookings/form", buddy: @buddy, booking: @booking %>
+      </div>
     </div>
+
   </div>
+
+
+
+
+
  </div>

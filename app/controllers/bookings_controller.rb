@@ -9,10 +9,10 @@ class BookingsController < ApplicationController
     @booking.buddy = @buddy
     @booking.user = current_user
     if @booking.save
-      flash[:alert] = "Booking succes !!"
+      flash[:success] = "🎉🎉 #{@buddy.user.first_name} will be your buddy starting #{@booking.start_date} 🎉🎉!!"
       redirect_to buddy_path(@buddy)
     else
-      flash[:alert] = "Error, verify your information"
+      flash[:success] = "Error, verify your information"
       render :new
     end
   end

@@ -6,8 +6,13 @@
   height: 90vh;
 }
 
+.banner-btn {
+  display: flex;
+  justify-content: center;
+}
+
 .banner h1 {
-  margin: 0;
+  margin: 10;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
@@ -15,9 +20,9 @@
 }
 
 .banner p {
-  margin: 0;
+  margin: 15px;
   color: white;
-  padding-bottom: 68px;
+  padding-bottom: 70px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 20px;
   font-weight: lighter;

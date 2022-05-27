@@ -1,14 +1,14 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
-  background-color: #161518;
+  justify-content: space-between;
+  height: 150px;
   display: flex;
-  align-items: center;
+  align-items: center; 
+  margin-top: 16px;
   padding: 15px;
 }
 
 .card-product img {
-  background-color: #161518;
   height: 100%;
   width: 120px;
   object-fit: cover;
@@ -21,8 +21,9 @@
 }
 
 .card-product p {
-  font-size: 13px;
-  color: white;
+  font-size: 14px;
+  color: #1C1B47;;
+  text-justify: center;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -31,8 +32,8 @@
 
 .card-product .card-product-infos {
   padding: 0px;
+  color: #D21E27;
   margin-bottom: 35px;
   border-radius: 10px;
-  background-color: #161518;
   text-align: center;
 }

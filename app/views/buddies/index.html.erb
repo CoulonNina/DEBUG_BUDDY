@@ -7,28 +7,34 @@
 </div>
 <% end %>
 
-<div class="body-wrapper">
 
-  <h1>See all Buddies</h1>
+
+
+
 <div class="container">
-
-  <div class="cards">
-    <% @buddies.each do |buddy| %>
-      <%= link_to buddy_path(buddy) do %>
-        <div class="card-category position-relative" style= "background-image:url(https://miro.medium.com/max/1000/1*LndgtuGeZopBIy9sXcmO3g.jpeg)">
-          <%= buddy.user.first_name %>
-          <%= buddy.user.last_name %>
-
-          <span class="position-absolute p-2 badge text-white text-decoration-none rounded bg-secondary" style="bottom:10px; right:10px;"><%= buddy.skills %>
-          <i class="fs-6 far fa-heart"></i>
-          </span>
-
+  <h1>See all Buddies</h1>
+    <div class="cards">
+      <% @buddies.each do |buddy| %>
+      <div class="a-box">
+        <%= link_to buddy_path(buddy) do %>
+        <div class="img-container">
+          <div class="img-inner">
+            <div class="inner-skew" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, crop: :fill %>')">
+            </div>
+          </div>
         </div>
-      <% end %>
+        <div class="text-container">
+          <h3> <%= buddy.user.first_name %> <%= buddy.user.last_name %></h3>
+            <div class="info-content">
+              <div class="line-clamp">
+                <p><%= buddy.description %></p>
+              </div>
+            <div class="skills " >
+            <span class="badge rounded-pill bg-danger mx-3"><%= buddy.skills %></span>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
-</div>
-  <%#= link_to "Register as a buddy", new_buddy_path %>
-  <%= link_to "Register as a Buddy", new_buddy_path unless current_user&.buddy %>
-  <%= link_to "Back to Home", root_path %>
-</div>
+
+<% end %>

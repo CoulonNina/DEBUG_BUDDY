@@ -1,7 +1,7 @@
 // Login button
 .nav-link-button {
-  color: #D21E27;
-  border: 2px solid #D21E27;
+  color: $redf;
+  border: 2px solid $redf;
   padding: 4px 24px;
   border-radius: 4px;
   font-weight: 500;
@@ -9,7 +9,7 @@
   transition: opacity 0.3s ease;
   text-decoration: none;
 }
-.nav-link:hover {
+.nav-link-button:hover {
   opacity: 1;
 }
 
@@ -39,6 +39,29 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background: $redf;
   transition: background 0.3s ease;
 }
+.btn-flat:hover {
+  color: white;
+  background-color: $redfcontrast;
+}
+
+.bg-skills-pills {
+  background-color: $redf;
+}
+
+// .button-primary {
+//   color: white;
+//   padding: 8px 24px;
+//   border-radius: 4px;
+//   // border: 1px solid white;
+//   border: none;
+//   background-color: $redf;
+//   transition: background 0.3s ease;
+// }
+
+// .button-primary:hover {
+//   background: $redfcontrast;
+//   color: white;
+// }

@@ -1,6 +1,13 @@
 
 <%= render "shared/banner" %>
-<%= render "shared/card-product" %>
 <div class="container">
-  <%= render "shared/cards" %>
+  <%= render "shared/card-product" %>
+  <div class="my-5">
+    <h3> Our latest buddies </h2>
+    <div class="cards">
+      <% @last_buddies.each do |buddy| %>
+        <%= render "shared/cards", buddy: buddy %>
+      <% end %>
+    </div>
+  </div>
 </div>

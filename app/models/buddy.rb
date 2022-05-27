@@ -6,4 +6,9 @@ class Buddy < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_one_attached :photo
+
+
+  # def array_of_skills
+  #   return  self.skills.split(" ")
+  # end
 end

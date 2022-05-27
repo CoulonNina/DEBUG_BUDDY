@@ -1,10 +1,13 @@
 
 .logos {
     display: flex;
+    background: white;
     gap: 30px;
     padding: 1em;
+    justify-content: flex-start;
+    align-items: center;
   }
-.text-center{
+.text-center {
   border: 5px solid #FFFF00;
   padding: 50px 0;
   text-align : center;
@@ -19,11 +22,15 @@
     justify-content: flex-start;
     align-items: center;
 }
-.logos {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+
 .infos p-2 {
   margin-bottom: var(--base-size-x2);
+}
+
+.cards-show-border-radius {
+  border-radius: 20px;
+}
+
+.cards-show-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.04);
 }

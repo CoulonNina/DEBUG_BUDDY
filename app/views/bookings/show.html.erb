@@ -1,15 +1,14 @@
 <%if policy(@booking).show? %>
 <h1>Mes bookings</h1>
+<div class="card-event">
 <% @bookings.each do |booking|%>
-
-<div>
-<%= booking.start_date %>
+<img src="https://riis.com/wp-content/uploads/2021/01/1010413543-huge-scaled.jpg" />
+<div class="card-event-infos">
+ <p><%= booking.start_date %>
 <%= booking.end_date %>
 <%= booking.user.first_name %>
 <%= booking.user.last_name %>
-<%= booking.user.email %>
+<%= booking.user.email %></p>
 </div>
 <% end %>
-<% end %>
-
-
+</div>

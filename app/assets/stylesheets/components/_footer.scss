@@ -1,14 +1,19 @@
 .footer {
-  background: black;
+  background: $bleuf;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 150px;
+  height: 100px;
   padding: 0px 50px;
   color: white;
   font-size: bold;
 }
+
+.footer p {
+  margin: none;
+}
+
 .footer-links {
   display: flex;
   align-items: center;
@@ -32,12 +37,12 @@ footer * {
 }
 
 .fa-facebook {
-  background: black;
+  background: $bleuf;
   color: white;
 }
 
 .fa-twitter {
-  background: black;
+  background: $bleuf;
   color: white;
 }
 

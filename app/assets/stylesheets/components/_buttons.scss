@@ -1,29 +1,44 @@
 // Login button
 .nav-link-button {
-  color: #4A4A4A;
-  border: 1px solid #6b6a6a;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
+  color: #D21E27;
+  border: 2px solid #D21E27;
+  padding: 4px 24px;
+  border-radius: 4px;
+  font-weight: 500;
   opacity: 0.8;
   transition: opacity 0.3s ease;
   text-decoration: none;
 }
+.nav-link:hover {
+  opacity: 1;
+}
 
 // Sign up button
 .btn-signup {
-  background-color: #7D1E6A;
   color: white;
-  padding: 10px 50px;
-  border-radius: 50px;
-  font-weight: bold;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: 1px solid white;
+  background-color: #1C1B47;
   transition: background 0.3s ease;
-  border: 1px solid black;
+}
+
+.btn-signup:hover {
+  background: #293462;
+  color: white;
 }
 
 // text button
 .btn-text {
   text-decoration: none;
   color: #7D1E6A;
+  transition: background 0.3s ease;
+}
+
+.btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
   transition: background 0.3s ease;
 }

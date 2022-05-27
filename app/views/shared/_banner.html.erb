@@ -1,9 +1,10 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dgw2zajw1/image/upload/v1653542991/la-derniere-ou-plutot-les-dernieres-poignees-de-main-en-date-ont-eu-lieu-lundi-24-septembre-a-new-york-a-la-veille-de-l-assemblee-generale-des-nations-unies-devant-les-photographes-donald-trump-et-emmanuel-macron-se-sont-serre-la-main-a-de_xftu7x.jpg);">
-  <div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dgw2zajw1/image/upload/v1653595051/alvaro-reyes-fSWOVc3e06w-unsplash_bocsvp.jpg);">
       <h1>Find a buddy to pair program </h1>
       <p>Set your programming language
         and see nerds around you!</p>
-    <a class="btn-signup" href="/buddies">Find my buddy!</a>
-    <a class="btn btn-secondary" href="buddies/new">Register as a buddy</a>
+    <div class="banner-btn">
+      <div class="btn-signup" href="/buddies">Find my buddy!</div>
+        <%= link_to "Find my buddy!", buddies_path, class: "btn-signup" %> 
+      <div class="btn-flat " href="buddies/new">Register as a buddy</div>
   </div>
 </div>

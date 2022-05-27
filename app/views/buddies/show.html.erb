@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <% unless current_user.buddy.id == @buddy.id %>
+        <% unless current_user&.buddy&.id == @buddy.id %>
           <div class="mt-3 w-100">
             <%= render "bookings/form", buddy: @buddy, booking: @booking %>
           </div>

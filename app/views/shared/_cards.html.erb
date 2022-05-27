@@ -1,30 +1,21 @@
 
-<div class="cards">
-  <% @last_buddies.each do |buddy| %>
-
-        <div class="a-box">
-    <%= link_to buddy_path(buddy), class: "clickable-cards" do %>
-          <div class="img-container">
-            <div class="img-inner">
-              <div class="inner-skew" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, crop: :fill %>')">
-              </div>
+<div class="a-box">
+  <%= link_to buddy_path(buddy), class: "clickable-cards" do %>
+        <div class="img-container">
+          <div class="img-inner">
+            <div class="inner-skew" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, crop: :fill %>')">
             </div>
           </div>
-          <div class="text-container">
+        </div>
+        <div class="text-container">
+          <div class="d-flex flex-column justify-content-around align-items-center block-text-card">
             <h3> <%= buddy.user.first_name %> <%= buddy.user.last_name %></h3>
-            <div class="info-content">
-              <div class="line-clamp">
-                <p>
-                <%= buddy.description %>
-                </p>
-              </div>
-              <div class="skills " >
-              <span class="badge rounded-pill bg-danger mx-3"><%= buddy.skills %>
-              </span>
-            </div>
-            </div>
+          
+              <span class="badge rounded-pill mx-3 bg-skills-pills flex-grow-0"><%= buddy.skills %></span>
+            <%# <div class="info-content"> %>
+              <p class="line-clamp description-text"><%= buddy.description %></p>
+            <%# </div> %>
           </div>
-    <% end %>
         </div>
 
   <% end %>

@@ -12,7 +12,12 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-          <%= link_to "All buddies", buddies_path, class: "nav-link" %> 
+          <%= link_to "All buddies", buddies_path, class: "nav-link" %>
+          
+          <% unless current_user.buddy %>
+            <%= link_to "Become a buddy", new_buddy_path, class: "nav-link"  %>
+          <% end %>
+          
           </li>
           <li class="nav-item dropdown">
             <img class="avatar-bordered dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dgw2zajw1/image/upload/v1653510149/azedfrd_-_copie_zcttp4.jpg" />
@@ -25,7 +30,8 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link-button" %>
+            <%= link_to "All buddies", buddies_path, class: "nav-link" %> 
+            <%= link_to "Login", new_user_session_path, class: "btn-signup" %>
           </li>
         <% end %>
       </ul>

@@ -1,40 +1,24 @@
-<%= simple_form_for :search, url: root_path, method: :get do |f| %>
-<div class="search-form-control form-group">
-  <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-  <button name="button" type="submit" class="btn btn-flat">
-    <i class="fas fa-search"></i> Search
-  </button>
-</div>
-<% end %>
+<div class="container my-5">
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+  <% end %>
 
 
 
 
 
-<div class="container">
-  <h1>See all Buddies</h1>
+  <div class="cards-index my-5"> 
+    <h1>Every Buddies</h1>
     <div class="cards">
       <% @buddies.each do |buddy| %>
-      <div class="a-box">
-        <%= link_to buddy_path(buddy) do %>
-        <div class="img-container">
-          <div class="img-inner">
-            <div class="inner-skew" style= "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path buddy.photo.key, height: 300, crop: :fill %>')">
-            </div>
-          </div>
-        </div>
-        <div class="text-container">
-          <h3> <%= buddy.user.first_name %> <%= buddy.user.last_name %></h3>
-            <div class="info-content">
-              <div class="line-clamp">
-                <p><%= buddy.description %></p>
-              </div>
-            <div class="skills " >
-            <span class="badge rounded-pill bg-danger mx-3"><%= buddy.skills %></span>
-        </div>
-      </div>
+        <%= render "shared/cards", buddy: buddy %>
+      <% end %>
     </div>
-    <% end %>
   </div>
+</div>
 
-<% end %>

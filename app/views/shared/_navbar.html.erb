@@ -23,7 +23,6 @@
             <img class="avatar-bordered dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dgw2zajw1/image/upload/v1653510149/azedfrd_-_copie_zcttp4.jpg" />
             <%# <img src="https://res.cloudinary.com/dgw2zajw1/image/upload/v1653509468/azedfrd_yif9zm.webp" class="avatar dropdown-toggle" id="navbarDropdown", data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "A linker :My Profil", class: "dropdown-item" %>
               <%= link_to "My Dashboard", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>

@@ -1,7 +1,9 @@
 
 
-  <%= simple_form_for [@buddy, @booking], input_html: { class: "d-flex flex-column" } do |f| %>
-    <%= f.input :start_date, as: :date, html5: true %>
-    <%= f.input :end_date, as: :date, html5: true %>
-    <%= f.submit class: 'btn btn-primary justify-self-center' %>
+  <%= simple_form_for [@buddy, @booking], html: { data: { controller: 'flatpickr'} } do |f| %>
+    <%= f.input :start_date, as: :string, input_html: { class: "datepickr" } %>
+    <%= f.input :end_date, as: :string , input_html: { class: "datepickr" } %>
+    <div class="d-flex flex-column justify-content-center">
+    <%= f.submit class: 'btn-signup' %>
+    </div>
   <% end %>

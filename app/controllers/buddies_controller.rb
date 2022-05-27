@@ -55,8 +55,8 @@ class BuddiesController < ApplicationController
   end
 
   def destroy
-    authorize @buddy
     @buddy = Buddy.find(params[:id])
+    authorize @buddy
     @buddy.destroy
     redirect_to buddies_path, status: :see_other
   end

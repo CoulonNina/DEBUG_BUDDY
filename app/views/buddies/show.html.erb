@@ -5,8 +5,17 @@
 
   <div class="d-flex justify-content-between pb-5">
 
-    <div class="col-6">
-      <h1><%= @buddy.user.first_name %>'s profile</h1>
+    <div class="col-8 px-5">
+      <div class="text-left mt-3 d-flex flex-row justify-content-between">
+        <h1><%= @buddy.user.first_name %>'s profile</h1>
+        <div class="d-flex flex-row justify-content-between" style='width: 40%'>
+          <% if policy(@buddy).update? %>
+              <%= link_to "Edit my profile", edit_buddy_path(@buddy), class: "btn btn-success" %>
+          <% end %>
+
+          <%= button_to "Delete my profile", @buddy, class: "btn btn-danger", method: :delete if policy(@buddy).destroy? %>
+        </div>
+      </div>
       <div class="card border-light cards-show-border-radius my-3 p-3">
           <p class="px-0 text-black"><strong>About me : </strong></p>
           <p><em><%= @buddy.description%></em></p>
@@ -22,23 +31,13 @@
       </div>
      <%# </div> %>
 
-    <div class="contributions">
-      <div class="card border-light cards-show-border-radius my-3 p-3">
-      <p><strong>Recent contributions</strong></p>
-      <p>Technical Project Manager / Technical Product Owner / Product Manager for Google</p>
+      <div class="contributions">
+        <div class="card border-light cards-show-border-radius my-3 p-3">
+        <p><strong>Recent contributions</strong></p>
+        <p>Technical Project Manager / Technical Product Owner / Product Manager for Google</p>
+        </div>
       </div>
-    </div>
 
-      <div class="text-left mt-3">
-
-        <% if policy(@buddy).update? %>
-          <p class="px-0 text-black mx-3">
-            <%= link_to "Edit my profile", edit_buddy_path(@buddy) %> |
-         </p>
-        <% end %>
-
-        <%= button_to "Delete my profile", @buddy, method: :delete if policy(@buddy).destroy? %>
-      </div>
     </div>
 
     <div class="col-4">
@@ -68,9 +67,11 @@
           </div>
         </div>
 
-        <div class="mt-3 w-100">
-          <%= render "bookings/form", buddy: @buddy, booking: @booking %>
-        </div>
+        <% unless current_user.buddy.id == @buddy.id %>
+          <div class="mt-3 w-100">
+            <%= render "bookings/form", buddy: @buddy, booking: @booking %>
+          </div>
+        <% end %>
       </div>
 
     </div>

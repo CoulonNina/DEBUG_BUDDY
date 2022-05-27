@@ -1,6 +1,8 @@
 <div class="container">
-  <div class="mt-3">
-    <p class="px-0 text-black text"> <i class="fa-solid fa-rotate-left"></i> <%= link_to "Back to all buddies", buddies_path %></p>
+  <div class="my-3">
+    <%= link_to buddies_path do %>
+    <span style="color: #1C1B47;"><i class="fa-solid fa-rotate-left"></i> Back to every buddies</span>
+    <% end %>
   </div>
 
   <div class="d-flex justify-content-between pb-5">
@@ -16,14 +18,14 @@
           <%= button_to "Delete my profile", @buddy, class: "btn btn-danger", method: :delete if policy(@buddy).destroy? %>
         </div>
       </div>
-      <div class="card border-light cards-show-border-radius my-3 p-3">
+      <div class="card border-light cards-show-shadow cards-show-border-radius my-3 p-3">
           <p class="px-0 text-black"><strong>About me : </strong></p>
           <p><em><%= @buddy.description%></em></p>
       </div>
 
 
       <%# <div class="skills"> %>
-      <div class="card border-light cards-show-border-radius my-3 p-3">
+      <div class="card border-light cards-show-shadow cards-show-border-radius my-3 p-3">
           <p class="px-0 text-black"><strong>My skills : </strong></p>
           <div>
           <span class="badge rounded-pill bg-primary m-3"><%= @buddy.skills %></span>
@@ -32,7 +34,7 @@
      <%# </div> %>
 
       <div class="contributions">
-        <div class="card border-light cards-show-border-radius my-3 p-3">
+        <div class="card border-light cards-show-shadow cards-show-border-radius my-3 p-3">
         <p><strong>Recent contributions</strong></p>
         <p>Technical Project Manager / Technical Product Owner / Product Manager for Google</p>
         </div>

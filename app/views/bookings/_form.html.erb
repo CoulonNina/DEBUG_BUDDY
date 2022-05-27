@@ -1,7 +1,7 @@
 
-<%= simple_form_for [@buddy, @booking] do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
 
+  <%= simple_form_for [@buddy, @booking], input_html: { class: "d-flex flex-column" } do |f| %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.submit class: 'btn btn-primary justify-self-center' %>
+  <% end %>
